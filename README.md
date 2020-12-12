@@ -14,10 +14,10 @@ $ pip install pdf_to_wordcloud
 PDF: Name of PDF file from which to geneate the wordcloud
 
 **Optional:**
---remove (-r): Removes word from wordcloud. Accepts multiple arguments (one per flag)
---save (-s): Saves wordcloud as PDF to current directory (no additional argument needed)
---saveto (-st): Saves wordcloud to specified directory
---mask (-m): PNG file to use as shape of wordcloud
+--remove (-r): Removes word from wordcloud. Accepts multiple arguments (one per flag) \
+--save (-s): Saves wordcloud as PDF to current directory (no additional argument needed) \
+--saveto (-st): Saves wordcloud to specified directory \
+--mask (-m): PNG file to use as shape of wordcloud \
 
 ## Usage
 
