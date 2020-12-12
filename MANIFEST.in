@@ -1,0 +1,2 @@
+include pdf_to_wordclould/data/stopwords.txt
+include pdf_to_wordclould/data/mask.png
