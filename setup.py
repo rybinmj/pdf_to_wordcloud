@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pdf_to_wordcloud",
-    version="0.0.1",
+    version="0.0.2",
     author="Matt Rybin",
     author_email="mxr2011@miami.edu",
     description="Generates a word cloud from a given PDF",
