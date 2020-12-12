@@ -28,12 +28,12 @@ $ pdf file.pdf
 
 Save image of wordcloud as PDF:
 ```zsh
-$ pdf file.pdf \-s
+$ pdf file.pdf -s
 ```
 
 Remove "this" and "that" from wordcloud and save:
 ```zsh
-$ pdf file.pdf \-r this \-r that \-s
+$ pdf file.pdf -r this -r that -s
 ```
 
 
