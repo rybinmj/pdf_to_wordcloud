@@ -48,7 +48,7 @@ def pdf():
         pdf = pdfplumber.open(pdf_filename)
         page_num = pdf.pages
 
-        punctuations = r"""!()-[]{};:'"",<>./?@#$%^&*_~"""
+        punctuations = r"""!()-[]{};:'"",<>./?@#$%^&*_~“"""
         quote_mark = """\""""
         stop_words = stopwords.words('english')
         cust_stopwords = stop_words + add_stopwords + extra_stopwords
@@ -65,7 +65,7 @@ def pdf():
                     [charact for charact in w if not charact.isdigit()])
                 if quote_mark in w:
                     w = w.replace(quote_mark, "")
-                if len(w) == 1:
+                if (len(w) == 1) or len(w) == 0:
                     continue
                 if w not in cust_stopwords:
                     words.append(w)
