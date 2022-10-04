@@ -23,7 +23,7 @@ def pdf():
     parser.add_argument(
         '-st', '--saveto', help="Save plot/data to given directory")
     parser.add_argument(
-        '-x', '--exportdata', help='Save CSV of word frequency data')
+        '-x', '--exportdata', action='store_true', help='Save CSV of word frequency data')
     parser.add_argument(
         '-n', 'filename', help='Optional name of data and wordcloud files (omit .pdf/.csv)')
 
