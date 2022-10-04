@@ -18,6 +18,8 @@ PDF: Name of PDF file from which to geneate the wordcloud
 --save (-s): Saves wordcloud as PDF to current directory (no additional argument needed) \
 --saveto (-st): Saves wordcloud to specified directory \
 --mask (-m): PNG file to use as shape of wordcloud \
+--exportdata (-x): Save CSV of word frequency data \
+--filename (-n): Optional name of data and wordcloud files (omit .pdf/.csv)
 
 ## Usage
 
@@ -34,6 +36,11 @@ $ pdf file.pdf -s
 Remove "this" and "that" from wordcloud and save:
 ```zsh
 $ pdf file.pdf -r this -r that -s
+```
+
+Remove "this" and "that" from wordcloud, export word frequency data and save both files with "my_output" filename:
+```zsh
+$ pdf file.pdf -r this -r that -x -n my_output -s
 ```
 
 
