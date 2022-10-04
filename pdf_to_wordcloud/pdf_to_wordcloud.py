@@ -21,7 +21,11 @@ def pdf():
     parser.add_argument(
         '-s', '--save', action='store_true', help="Save plot as PDF to current directory")
     parser.add_argument(
-        '-st', '--saveto', help="Save plot to given directory")
+        '-st', '--saveto', help="Save plot/data to given directory")
+    parser.add_argument(
+        '-x', '--exportdata', help='Save CSV of word frequency data')
+    parser.add_argument(
+        '-n', 'filename', help='Optional name of data and wordcloud files (omit .pdf/.csv)')
 
     args = parser.parse_args()
 
@@ -106,6 +110,17 @@ def pdf():
         min_font_size=8,
         stopwords=stopwords,
     ).generate_from_frequencies(dct)
+    
+    # export word frequency df
+    if args.exportdata:
+        if not args.filename:
+            data_filename = 'data.csv'
+        else:
+            data_filename = f'{args.filename}.csv'
+        if args.saveto:
+            df.to_csv(f'{args.saveto}/{data_filename}')
+        else:
+            df.to_csv(data_filename)
 
     # plot the WordCloud image
     plt.figure(figsize=(8, 8), dpi=500)
@@ -113,7 +128,11 @@ def pdf():
     plt.axis("off")
     plt.tight_layout(pad=0)
 
-    figname = 'pdf_to_wordcloud.pdf'
+    if not args.filename:
+        figname = 'pdf_to_wordcloud.pdf'
+    else:
+        figname = f'{args.filename}.pdf'
+
     if args.save:
         plt.savefig(figname)
     elif args.saveto:
