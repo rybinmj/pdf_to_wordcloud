@@ -52,7 +52,7 @@ def pdf():
         pdf = pdfplumber.open(pdf_filename)
         page_num = pdf.pages
 
-        punctuations = r"""!()-[]{};:'"",<>./?@#$%^&*_~“"""
+        punctuations = r"""!()-[]{};:'"",<>./?@#$%^&*_~“”——"""
         quote_mark = """\""""
         stop_words = stopwords.words('english')
         cust_stopwords = stop_words + add_stopwords + extra_stopwords
